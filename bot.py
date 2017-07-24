@@ -128,9 +128,9 @@ def any_msg(message):
     bot.send_message(message.chat.id, text, reply_markup=keyboardText)
 '''
 if __name__ == '__main__':
-    #try:
-    bot.polling(none_stop=True)
-    #except Exception:
-    #    print('error Exception')
+    try:
+        bot.polling(none_stop=True)
+    except Exception:
+        print('error Exception')
 
 #YandexMetrica.setCustomAppVersion("1.13.2");
