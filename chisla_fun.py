@@ -9,9 +9,9 @@ def sumchisl(tmp):
         return tmp
 
 def sumfi(tmp):
-    print(tmp)
+    #print(tmp)
     tmp = sum([int(i) for i in tmp if i in '123456789']) // 3
-    print(tmp)
+    #print(tmp)
     if tmp > 9:
         return sumchisl(str(tmp))
     else:
@@ -33,13 +33,12 @@ def strtochislo(tmp0):
 
 def date(message):
     date_tmp = message.text.replace(' ','').replace(':','').replace('.','').replace(',','')
-    print('tmp = {}'.format(date_tmp))
-
+    #print('tmp = {}'.format(date_tmp))
     return sumchisl(date_tmp)
 
 def fio(message):
     date_tmp = message.text.replace(' ','').replace(':','').replace('.','').replace(',','').lower()
-    print('tmp = {}'.format(date_tmp))
+    #print('tmp = {}'.format(date_tmp))
     chislo_tmp = sumfi(strtochislo(date_tmp))
     return chislo_tmp
 
