@@ -105,14 +105,14 @@ def any_msg(message):
     mfio = pfio.match(message.text)
     mdate = pdate.match(message.text)
 
-    print(mfio)
-    print(mdate)
+    #print(mfio)
+    #print(mdate)
     if (mfio or mdate):
         if mdate:
-            print('Match found: "{}"'.format(mdate.group()))
+            #print('Match found: "{}"'.format(mdate.group()))
             chislo = chisla_fun.date(message)
         if mfio:
-            print('Match found: "{}"'.format(mfio.group()))
+            #print('Match found: "{}"'.format(mfio.group()))
             chislo = chisla_fun.fio(message)
         text = 'Вы ввели: *{}*\nВыше число: *{}*'.format(message.text, chislo)
         bot.send_message(message.chat.id, text, parse_mode='Markdown')
